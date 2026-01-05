@@ -30,3 +30,10 @@ python -m pip install -r requirements.txt
 - Variável-alvo: `DELAYED = 1` se `ARRIVAL_DELAY > 15`.
 - Features só usam dados conhecidos antes da decolagem para evitar vazamento.
 - Pré-processamento inclui imputação e one-hot encoding; métricas principais: precisão, recall, F1 e ROC-AUC.
+
+
+## Limitacoes e proximos passos
+- Classe de atraso desbalanceada (~18%); com `class_weight="balanced"` e threshold ajustado o recall melhora, mas o ROC-AUC (~0.65) indica espaco para modelos mais fortes.
+- Faltam variaveis de contexto (clima, sazonalidade fina, conexoes) que poderiam aumentar o sinal; vale explorar fontes externas e novas features.
+- Avaliar calibracao de probabilidade e hiperparametros (ex.: search mais amplo, XGBoost) e comparar abordagens de balanceamento (class_weight vs. reamostragem) priorizando recall sem inflar falsos positivos.
+- Para producao, versionar o threshold salvo no modelo e monitorar drift de distribuicoes e degradacao de recall.
