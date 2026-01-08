@@ -33,9 +33,9 @@ python -m pip install -r requirements.txt
 
 
 ## Resultados atuais (holdout 20%)
-- Random Forest balanceado: ROC-AUC ~0.647.
-- Threshold escolhido para F1 da classe de atraso: ~0.487.
-- Com esse cutoff: precisao ~0.24 / recall ~0.67 (acc ~0.57), refletindo o desbalanceamento de ~18% atrasos.
+- Random Forest balanceado (tuning leve): ROC-AUC ~0.663.
+- Threshold escolhido para F1 da classe de atraso: ~0.435.
+- Com esse cutoff: precisao ~0.26 / recall ~0.60 (acc ~0.63), refletindo o desbalanceamento de ~18% atrasos.
 - O pickle em `models/random_forest_delay_model.pkl` salva `model` e `threshold` para reproduzir o corte.
 
 ## Limitacoes e proximos passos
