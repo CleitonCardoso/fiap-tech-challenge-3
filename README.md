@@ -26,6 +26,12 @@ python -m pip install -r requirements.txt
 3. (Opcional) `04_clusterizacao.ipynb` para agrupamentos.
 4. `05_export_modelo.ipynb` para salvar o modelo final em `models/random_forest_delay_model.pkl`.
 
+## Script de treino (alternativo)
+Se preferir um fluxo sem notebook, execute:
+```bash
+python scripts/train_random_forest.py
+```
+
 ## Notas
 - Variável-alvo: `DELAYED = 1` se `ARRIVAL_DELAY > 15`.
 - Features só usam dados conhecidos antes da decolagem para evitar vazamento.
